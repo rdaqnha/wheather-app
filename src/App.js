@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import LocationList from "./components/WeatherLocation";
+import LocationList from "./components/WeatherLocation/LocationList";
 import "./App.css";
 
 class App extends Component {
