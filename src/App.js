@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import WeatherLocation from "./components/WeatherLocation";
+import LocationList from "./components/WeatherLocation";
 import "./App.css";
 
 class App extends Component {
   render() {
     return (<div className="App" >
-      <WeatherLocation city="Toledo,es" />
+      <LocationList />
     </div>);
   }
 }
 
-export default App;
+export default App; 
