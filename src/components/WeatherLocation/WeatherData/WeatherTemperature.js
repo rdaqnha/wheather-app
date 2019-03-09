@@ -8,16 +8,16 @@ const stateToIconName = weatherState => {
   switch (weatherState) {
     case constWeather.CLOUD:
       return "cloud";
-    case constWeather.CLOUDY:
-      return "cloudy";
+    case constWeather.DRIZZLE:
+      return "day-showers";
     case constWeather.SUN:
       return "day-sunny";
     case constWeather.RAIN:
       return "rain";
     case constWeather.SNOW:
       return "snow";
-    case constWeather.WINDY:
-      return "windy";
+    case constWeather.THUNDER:
+      return "day-thunderstore";
     default:
       return "day-sunny";
   }
