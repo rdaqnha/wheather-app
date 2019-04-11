@@ -17,7 +17,7 @@ const stateToIconName = weatherState => {
     case constWeather.SNOW:
       return "snow";
     case constWeather.THUNDER:
-      return "day-thunderstore";
+      return "day-thunderstorm";
     default:
       return "day-sunny";
   }
