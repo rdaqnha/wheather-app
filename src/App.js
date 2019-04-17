@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Grid, Row, Col } from "react-flexbox-grid";
-import LocationList from "./components/WeatherLocation/LocationList";
+import LocationList from "./components/LocationList";
+import ForecastExtended from "./components/ForecastExtended";
 import "./App.css";
-import { Paper, AppBar, Typography, Toolbar } from "@material-ui/core";
+import { Paper, AppBar, Typography, Toolbar, MuiThemeProvider } from "@material-ui/core";
 
 const cities = [
   "Toledo,es",
@@ -14,15 +15,19 @@ const cities = [
 
 class App extends Component {
 
-  handleSelectedLocation = city => {
-    console.log(`handleSelectedLocation ${city}`);
+  constructor() {
+    super();
+    this.state = {city: null};
+  }
 
-    
+  handleSelectedLocation = city => {
+    this.setState({ city });
   }
 
   render() {
+    const {city} = this.state;
     return (
-
+      <MuiThemeProvider>
         <Grid fluid>
           <Row>
             <AppBar position='sticky'>
@@ -41,12 +46,18 @@ class App extends Component {
               />
             </Col>
             <Col xs={12} md={6}>
-            <Paper elevation={4}>
-              <div className="details"></div>
+            <Paper zDepth={4}>
+              <div className="detail">
+                {
+                  city &&
+                    <ForecastExtended city={city}/> 
+                }
+              </div>
             </Paper>
             </Col>
           </Row>
         </Grid>
+      </MuiThemeProvider>
     );
   }
 }

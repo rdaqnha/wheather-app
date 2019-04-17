@@ -3,7 +3,7 @@ import { constWeather } from '../constans/weather';
 
 
 const getTemp = kelvin => {
-    return Number(convert(kelvin).from("K").to("C").toFixed(2));
+    return Number(convert(kelvin).from("K").to("C").toFixed(0));
 }
 
 const getWeatherState = weather => {

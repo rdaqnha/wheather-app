@@ -23,10 +23,6 @@
     white-space: nowrap;
 }
 
-.locationList {
-    
-}
-
 @media (max-width: 64em) {
     .locationList {
         max-height: 30vh;
